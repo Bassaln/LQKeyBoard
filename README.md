@@ -27,6 +27,7 @@ extension ViewController:LQKeyBoardDelegate{
         self.textView?.contentInset = UIEdgeInsetsMake(0, 0, rect.size.height, 0)
     }
 }
+```
 
-![mov](http://127.0.0.1/123.mov)
+![](http://127.0.0.1/123.mov)
 
