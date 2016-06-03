@@ -1,5 +1,7 @@
 #### 解决键盘遮挡输入问题
 
+######Demo
+
 ```swift
 class ViewController:LQKeyBoardDelegate{
   var textView:UITextView?
