@@ -2,8 +2,9 @@
 
 ######Demo
 
+#######注册键盘的出现/隐藏
 ```swift
-class ViewController:LQKeyBoardDelegate{
+class ViewController{
   var textView:UITextView?
   override func viewDidLoad() {
       super.viewDidLoad()
@@ -12,14 +13,18 @@ class ViewController:LQKeyBoardDelegate{
       LQKeyBoard.registerKeyBoardShow(self)
       LQKeyBoard.registerKeyBoardHide(self)
   }
-  
-  func keyBoardWillHide(notification:NSNotification){
-      self.textView?.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
-  }
-  func keyBoardWillShow(notification:NSNotification){
-      let rect = LQKeyBoard.returnKeyBoardRect(by: notification)
-      self.textView?.contentInset = UIEdgeInsetsMake(0, 0, rect.size.height, 0)
-  }
-
 ```
+#######遵循协议并实现协议中的方法
+```swift
+extension ViewController:LQKeyBoardDelegate{
+    //键盘隐藏
+    func keyBoardWillHide(notification:NSNotification){
+        self.textView?.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+    }
+    //键盘出现
+    func keyBoardWillShow(notification:NSNotification){
+        let rect = LQKeyBoard.returnKeyBoardRect(by: notification)
+        self.textView?.contentInset = UIEdgeInsetsMake(0, 0, rect.size.height, 0)
+    }
+}
 
