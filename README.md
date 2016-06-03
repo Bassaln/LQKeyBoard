@@ -29,5 +29,5 @@ extension ViewController:LQKeyBoardDelegate{
 }
 ```
 
-![mov](http://127.0.0.1/123.mov)
+![image](http://127.0.0.1/images/test.jpg)
 
