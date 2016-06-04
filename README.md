@@ -29,5 +29,3 @@ extension ViewController:LQKeyBoardDelegate{
 }
 ```
 
-![image](https://github.com/Bassaln/files/blob/master/files.png)
-
